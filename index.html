@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles/main.css" />
+    <script src="/js/script.js"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Jquery, popper.js, Bootstrap.js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<!--Main body-->
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Contact<b>Savy</b></a>
+    </nav>
+
+<!--Contact List-->
+<div class="container">
+    <div class="row" id="headingRow">
+        <div class="col-sm-6 noPadding">
+            <h4>My Contacts</h4>
+        </div>
+        <div class="col-sm-6 noPadding" style="text-align: right">
+            <div class="dropdown" style="display: inline-block;">
+                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    filter by
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Mobile number</a>
+                    <a class="dropdown-item" href="#">Email</a>
+                </div>
+            </div>
+            <button class="btn btn-light" type="button" id="AddContactButton">
+                Add Contact
+            </button>
+        </div>
+    </div>
+
+    <div class="row" id="letterRow">
+        <div class="col-sm-6">
+            <p>B</p>
+        </div>
+    </div>
+
+    <div class="row" id="profileRow">
+        <div class="col-sm-3 col-md-2">
+            <img src="/assets/contact5.jpg" alt="contact5" height="80px" width="80px" id="profilePicture">
+        </div>
+        <div class="col-sm-4 col-md-2 parent">
+            <div class="child">
+            <p>Ben Nevis</p>
+            <p style="color: grey">+27 82 299 5656</p>
+        </div>
+        </div>
+        <div class="col-sm-4 col-md-8 parent" style="text-align: right">
+            <div class="child">
+            <img src="/assets/delete.png" alt="delete" height="20px" width="20px" id="deleteIcon">
+        </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row" id="profileRow">
+            <div class="col-sm-3 col-md-2">
+                <img src="/assets/contact3.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+            </div>
+            <div class="col-sm-4 col-md-2 parent">
+                <div class="child">
+                <p>Brian Clayton</p>
+                <p style="color: grey">+27 84 455 7854</p>
+            </div>
+            </div>
+            <div class="col-sm-4 col-md-8 parent" style="text-align: right">
+                <div class="child">
+                <img src="/assets/delete.png" alt="delete" height="20px" width="20px" id="deleteIcon">
+            </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row" id="profileRow">
+                <div class="col-sm-3 col-md-2">
+                    <img src="/assets/contact4.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+                </div>
+                <div class="col-sm-4 col-md-2 parent">
+                    <div class="child">
+                    <p>Britney Klerk</p>
+                    <p style="color: grey">+27 73 254 1587</p>
+                </div>
+                </div>
+                <div class="col-sm-4 col-md-8 parent" style="text-align: right">
+                    <div class="child">
+                    <img src="/assets/delete.png" alt="delete" height="20px" width="20px" id="deleteIcon">
+                </div>
+                </div>
+            </div>
+
+            <div class="row" id="letterRow">
+                    <div class="col-sm-6">
+                        <p>C</p>
+                    </div>
+                </div>
+
+                <div class="row" id="profileRow">
+                        <div class="col-sm-3 col-md-2">
+                            <img src="/assets/contact1.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+                        </div>
+                        <div class="col-sm-4 col-md-2 parent">
+                            <div class="child">
+                            <p>Casandra Harris</p>
+                            <p style="color: grey">+27 82 864 2546</p>
+                        </div>
+                        </div>
+                        <div class="col-sm-4 col-md-8 parent" style="text-align: right">
+                            <div class="child">
+                            <img src="/assets/delete.png" alt="delete" height="20px" width="20px" id="deleteIcon">
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row" id="profileRow">
+                            <div class="col-sm-3 col-md-2">
+                                <img src="/assets/contact2.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+                            </div>
+                            <div class="col-sm-4 col-md-2 parent">
+                                <div class="child">
+                                <p>Caitlyn Bowens</p>
+                                <p style="color: grey">+27 334 5879</p>
+                            </div>
+                            </div>
+                            <div class="col-sm-4 col-md-8 parent" style="text-align: right">
+                                <div class="child">
+                                <img src="/assets/delete.png" alt="delete" height="20px" width="20px" id="deleteIcon">
+                            </div>
+                            </div>
+                        </div>
+
+</div>
+
+</body>
+</html>
