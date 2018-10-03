@@ -6,7 +6,7 @@
     <title>Contact List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/styles/main.css" />
-    <script type="text/javascript" src="/js/script.js"></script>
+    
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
 </head>
 
 <!--Main body-->
@@ -31,17 +32,12 @@
         <div class="col-sm-6 noPadding">
             <h4>My Contacts</h4>
         </div>
-        <div class="col-sm-6 noPadding" style="text-align: right">
-            <div class="dropdown" style="display: inline-block;">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    filter by
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Mobile number</a>
-                    <a class="dropdown-item" href="#" id="emailToggle">Email</a>
-                </div>
-            </div>
-            <button class="btn btn-light" type="button" id="AddContactButton" data-toggle="modal" data-target="#addContactModal">
+        <div class="col-sm-6 noPadding" style="text-align: right;">
+            <select id="myselectFilter">
+                <option value="1">Mobile Number</option>
+                <option value="2">Email</option>
+            </select>
+            <button class="btn btn-outline-primary" type="button" id="AddContactButton" data-toggle="modal" data-target="#addContactModal">
                 Add Contact
             </button>
         </div>
@@ -54,183 +50,177 @@
     </div>
 
     <div class="row" id="profileRow">
-        <div class="col-sm-3 col-md-2">
+        <div class="col-3 col-sm-3 col-md-2">
             <img src="/assets/contact5.jpg" alt="contact5" height="80px" width="80px" id="profilePicture">
         </div>
-        <div class="col-sm-4 col-md-2 parent">
+        <div class="col-6 col-sm-5 col-md-4 parent"> 
             <div class="child">
-            <p>Ben Nevis</p>
-            <p style="color: grey">+27 82 299 5656</p>
-            <p class="toggleFilter" style="color: grey">ben@fourways.com</p>
+                <p>Ben Nevis</p>
+                <p class="toggleFilterNumber" style="color: grey">+27 82 299 5656</p>
+                <p class="toggleFilterEmail" style="color: grey">ben@fourways.com</p>
+            </div>
         </div>
-        </div>
-        <div class="col-sm-4 col-md-8 parent" style="text-align: right">
+        <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
             <div class="child">
-                    <button type="submit" style="border: 0; background: transparent">
-                            <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
-                        </button>
-        </div>
+                <button type="submit" style="border: 0; background: transparent">
+                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                </button>
+            </div>
         </div>
     </div>
     <hr>
 
     <div class="row" id="profileRow">
-            <div class="col-sm-3 col-md-2">
-                <img src="/assets/contact3.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
-            </div>
-            <div class="col-sm-4 col-md-2 parent">
-                <div class="child">
+        <div class="col-3 col-sm-3 col-md-2">
+            <img src="/assets/contact3.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+        </div>
+        <div class="col-6 col-sm-5 col-md-4 parent">
+            <div class="child">
                 <p>Brian Clayton</p>
-                <p style="color: grey">+27 84 455 7854</p>
-                <p class="toggleFilter" style="color: grey">brian@gmail.com</p>
-            </div>
-            </div>
-            <div class="col-sm-4 col-md-8 parent" style="text-align: right">
-                <div class="child">
-                        <button type="submit" style="border: 0; background: transparent">
-                                <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
-                            </button>
-            </div>
+                <p class="toggleFilterNumber" style="color: grey">+27 84 455 7854</p>
+                <p class="toggleFilterEmail" style="color: grey">brian@gmail.com</p>
             </div>
         </div>
-        <hr>
+        <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
+            <div class="child">
+                <button type="submit" style="border: 0; background: transparent">
+                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
 
-        <div class="row" id="profileRow">
-                <div class="col-sm-3 col-md-2">
-                    <img src="/assets/contact4.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
-                </div>
-                <div class="col-sm-4 col-md-2 parent">
-                    <div class="child">
-                    <p>Britney Klerk</p>
-                    <p style="color: grey">+27 73 254 1587</p>
-                    <p class="toggleFilter" style="color: grey">brit@yahoo.com</p>
-                </div>
-                </div>
-                <div class="col-sm-4 col-md-8 parent" style="text-align: right">
-                    <div class="child">
-                            <button type="submit" style="border: 0; background: transparent">
-                                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
-                                </button>
-                </div>
+    <div class="row" id="profileRow">
+        <div class="col-3 col-sm-3 col-md-2">
+            <img src="/assets/contact4.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+        </div>
+        <div class="col-6 col-sm-5 col-md-4 parent">
+            <div class="child">
+                <p>Britney Klerk</p>
+                <p class="toggleFilterNumber" style="color: grey">+27 73 254 1587</p>
+                <p class="toggleFilterEmail" style="color: grey">brit@yahoo.com</p>
+            </div>
+        </div>
+        <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
+            <div class="child">
+                <button type="submit" style="border: 0; background: transparent">
+                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="letterRow">
+        <div class="col-sm-6">
+            <p>C</p>
+        </div>
+    </div>
+
+    <div class="row" id="profileRow">
+        <div class="col-3 col-sm-3 col-md-2">
+            <img src="/assets/contact1.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+        </div>
+        <div class="col-6 col-sm-5 col-md-4 parent">
+            <div class="child">
+                <p>Casandra Harris</p>
+                <p class="toggleFilterNumber" style="color: grey">+27 82 864 2546</p>
+                <p class="toggleFilterEmail" style="color: grey">charris@gmail.com</p>
+            </div>
+        </div>
+        <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
+            <div class="child">
+                <button type="submit" style="border: 0; background: transparent">
+                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row" id="profileRow">
+            <div class="col-3 col-sm-3 col-md-2">
+                <img src="/assets/contact2.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+            </div>
+            <div class="col-6 col-sm-5 col-md-4 parent">
+                <div class="child">
+                    <p>Caitlyn Bowens</p>
+                    <p class="toggleFilterNumber" style="color: grey">+27 74 334 5879</p>
+                    <p class="toggleFilterEmail" style="color: grey">caitbow@hotmail.com</p>
                 </div>
             </div>
-
-            <div class="row" id="letterRow">
-                    <div class="col-sm-6">
-                        <p>C</p>
-                    </div>
+            <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
+                <div class="child">
+                    <button type="submit" style="border: 0; background: transparent">
+                        <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                    </button>
                 </div>
-
-                <div class="row" id="profileRow">
-                        <div class="col-sm-3 col-md-2">
-                            <img src="/assets/contact1.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
-                        </div>
-                        <div class="col-sm-4 col-md-2 parent">
-                            <div class="child">
-                            <p>Casandra Harris</p>
-                            <p style="color: grey">+27 82 864 2546</p>
-                            <p class="toggleFilter" style="color: grey">charris@gmail.com</p>
-                        </div>
-                        </div>
-                        <div class="col-sm-4 col-md-8 parent" style="text-align: right">
-                            <div class="child">
-                                    <button type="submit" style="border: 0; background: transparent">
-                                            <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
-                                        </button>
-                        </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="row" id="profileRow">
-                        <div class="col-sm-4 col-md-2">
-                            <img src="/assets/contact2.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
-                        </div>
-                        <div class="col-sm-4 col-md-2 parent">
-                            <div class="child">
-                            <p>Caitlyn Bowens</p>
-                            <p style="color: grey">+27 74 334 5879</p>
-                            <p class="toggleFilter" style="color: grey">caitbo@hotmail.com</p>
-                        </div>
-                        </div>
-                        <div class="col-sm-4 col-md-8 parent" style="text-align: right">
-                            <div class="child">
-                                    <button type="submit" style="border: 0; background: transparent">
-                                            <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
-                                        </button>
-                        </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
 
     <!-- Add contact modal -->
-  <div class="modal fade" id="addContactModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Add contact modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <h4 class="modal-title" style="color: #007bff">Add Contact</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="modal-body-image">
-                <img src="/assets/ContactPlaceHolder.png" alt="delete" height="70px" width="70px" id="contactPlaceHolder">
-                <img src="/assets/AddButton.png" alt="delete" height="18px" width="18px" id="addButton">
-            </div>
-            <form class="addContactForm">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="inputSurname" placeholder="Surname">
-                    </div>
-                    <div class="form-group">
-                            <input type="text" class="form-control" id="inputNumber" placeholder="Mobile Number">
-                          </div>
-                          <div class="form-group">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email adress">
-                              </div>
-                              <div class="form-group">
-                                    <input type="text" class="form-control" id="inputAdress" placeholder="Adress">
-                                  </div>
-                  </form>
-                  <div class="formSubmitButtons">
-                  <button type="button" class="btn btn-outline-secondary formButton" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-outline-primary formButton" data-dismiss="modal">Save</button>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                  <!-- Delete contact modal -->
-  <div class="modal fade" id="deleteContactModal" role="dialog">
+    <div class="modal fade" id="addContactModal" role="dialog">
         <div class="modal-dialog">
-        
-          <!-- Delete contact modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-            <h4 class="modal-title" style="color: #007bff">Delete Contact</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body" id="deleteContact">
-                <p style="color: grey">Are you sure you want to delete this contact?</p>
-                <div class="SubmitButtons">
+    
+            <!-- Add contact modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: #007bff">Add Contact</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-image">
+                        <img src="/assets/ContactPlaceHolder.png" alt="delete" height="70px" width="70px" id="contactPlaceHolder">
+                        <img src="/assets/AddButton.png" alt="delete" height="18px" width="18px" id="addButton">
+                    </div>
+                    <form class="addContactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputSurname" placeholder="Surname">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputNumber" placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email adress">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputAdress" placeholder="Adress">
+                        </div>
+                    </form>
+                    <div class="formSubmitButtons">
                         <button type="button" class="btn btn-outline-secondary formButton" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-outline-primary formButton" data-dismiss="modal">Save</button>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Delete contact modal -->
+    <div class="modal fade" id="deleteContactModal" role="dialog">
+        <div class="modal-dialog">
+        
+            <!-- Delete contact modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: #007bff">Delete Contact</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="deleteContact">
+                    <p style="color: grey">Are you sure you want to delete this contact?</p>
+                    <div class="SubmitButtons">
+                        <button type="button" class="btn btn-outline-secondary formButton" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-outline-primary formButton" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
     </div>
-  </div>
-
 </div>
+      
 
 </body>
 </html>

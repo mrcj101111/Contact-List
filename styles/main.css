@@ -42,13 +42,13 @@ h4 {
 
 .parent {
     width: 100%;
-  height: 80px;
-  display: table;
+    height: 80px;
+    display: table;
 }
 
 .parent > .child {
     display: table-cell;
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .parent > .child > p {
@@ -60,15 +60,11 @@ h4 {
     cursor: pointer;
 }
 
-.toggleFilter {
-    visibility: hidden;
-}
-
 .modal-body-image {
     text-align: center;
     position: relative;
     top: 0;
-  left: 0;
+    left: 0;
 }
 
 #contactPlaceHolder {
@@ -99,4 +95,46 @@ h4 {
 
 #deleteContact {
     text-align: center;
+}
+
+#myselectFilter {
+    height: 38px;
+    width: auto;
+    border-color: #f8f9fa;
+    border-radius: 4px;
+    background: rgb(248, 249, 250);
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+#myselectFilter:hover {
+    background: #E8E8E8;
+}
+
+#AddContactButton {
+    margin-top: -4px !important;
+}
+
+#addContactModal {
+    margin-top: auto ;
+    margin-bottom: auto;
+    height: 570px;
+}
+
+#deleteContactModal {
+    margin-top: auto ;
+    margin-bottom: auto;
+    height: 250px;
+}
+
+/* Media Queries */
+@media(max-width: 414px) {
+    #profilePicture {
+        height: 50px;
+        width: 50px;
+    }
+
+    a.navbar-brand {
+        margin: auto;
+    }
 }
