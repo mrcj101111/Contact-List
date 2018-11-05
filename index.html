@@ -10,6 +10,7 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!--Jquery, popper.js, Bootstrap.js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@
         <div class="floatRightButtons">
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Filter by
-                <span class="caret"></span></button>
+                <span class="caret"><i class="fas fa-angle-down"></i></span></button>
                 <ul class="dropdown-menu">
                     <li class="firstIndex"><a>Mobile number</a></li>
                     <li><a>Email</a></li>
@@ -41,6 +42,7 @@
                 <button class="btn btn-outline-primary" type="button" id="AddContactButton" data-toggle="modal" data-target="#addContactModal">
                 Add Contact
                 </button>
+                <input type="image" src="assets/AddButton.png" class="AddContactPlusIcon" data-toggle="modal" data-target="#addContactModal"/>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -56,7 +58,7 @@
             <div class="profilePicture contact1">
             </div>
         </div>
-        <div class="col-6 col-sm-5 col-md-4 parent"> 
+        <div class="col-6 col-sm-5 col-md-4 parent">
             <div class="child">
                 <p>Ben Nevis</p>
                 <p class="toggleFilterNumber" style="color: grey">+27 82 299 5656</p>

@@ -8,7 +8,7 @@
 
 a.navbar-brand {
     color: white !important;
-    font-size: 20px;
+    font-size: 35px;
 }
 
 h4 {
@@ -89,13 +89,29 @@ h4 {
     background: white;
     height: 40px;
     width: 40px;
+    position: relative;
+    margin: auto;
+    border-radius: 50%;
+    top: -35px;
+    left: 40px;
+    border: 0.1px solid #E8E8E8
+}
+
+.addButtonBackground:hover {
+    cursor: pointer;
 }
 
 #addButton {
-    border-radius: 50%;
     line-height: 0.8px;
     height: 18px;
     width: 18px;
+    position: absolute;
+    margin: auto;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #contactPlaceHolder {
@@ -121,7 +137,7 @@ h4 {
     padding: 0px;
 }
 
-#deleteIcon, #addButton:hover { 
+#deleteIcon, #addButton:hover {
     cursor: pointer;
 }
 
@@ -137,13 +153,6 @@ h4 {
     top: 0;
     left: 0;
     border: 0.1px solid #E8E8E8;
-}
-
-#addButton {
-    position: absolute;
-    top: 50px;
-    left: 242px;
-    background: white;
 }
 
 .addContactForm {
@@ -198,14 +207,14 @@ h4 {
 }
 
 .caret {
-    border-right: 1px solid #909090;
-    padding-right: 10px;
+    border-left: 1px solid #909090;
+    padding-left: 10px;
+    margin-left: 20px;
 }
 
 li {
     padding: 0 0 0 10px;
     margin: 0;
-    height: 32px;
     line-height: 32px;
     font-weight: 400;
     vertical-align: center;
@@ -225,7 +234,7 @@ li:hover {
 }
 
 .modal-header {
-    margin: 20px;
+    margin: 0 20px;
     height: 70px;
     line-height: 50px;
     vertical-align: middle;
@@ -239,17 +248,118 @@ li:hover {
 }
 
 .modal-header .close {
-    margin: -50px -40px auto auto;
+    margin: -30px -40px auto auto;
+}
+
+.form-control {
+    border-color: #E8E8E8;
+}
+
+::placeholder {
+    color: #909090 !important;
+}
+
+.formSubmitButtons {
+    margin-right: 50px;
+}
+
+.formButton {
+    width: 150px;
+    height: 40px;
+}
+
+.btn-outline-primary {
+    margin-left: 10px;
+}
+
+.modal-body p {
+    margin: 0 110px 20px 110px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    background: white;
+    color: #909090;
+}
+
+.AddContactPlusIcon {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: none;
+    margin: 0 10px;
 }
 
 /* Media Queries */
-@media(max-width: 414px) {
-    #profilePicture {
-        height: 50px;
-        width: 50px;
+@media(max-width: 769px) {
+    .navbar {
+        height: 65px;
+    }
+    a.navbar-brand {
+        font-size: 20px;
+    }
+    h4 {
+        margin-left: 0px;
+        font-weight: 300 !important;
     }
 
-    a.navbar-brand {
+    #AddContactButton {
+        display: none;
+    }
+
+    .AddContactPlusIcon {
+    display: inline-block;
+    }
+
+    #letterRow {
+    height: 20px;
+    line-height: 20px;
+    }
+
+    .profilePicture {
+    height: 70px;
+    width: 70px;
+    }
+
+    .parent > .child > p {
+        font-size: 12px;
+    }
+
+    #addContactModal {
+        margin-top: 50px ;
         margin: auto;
     }
+
+    #contactPlaceHolder {
+    height: 100px;
+    width: 100px;
+        margin-bottom: -40px;
+    }
+
+    .addContactForm {
+        margin: 10px 10px;
+    }
+
+    .addButtonBackground {
+        top: unset;
+    }
+
+    .formSubmitButtons {
+        margin: 0px;
+        text-align: center;
+    }
+
+    .formButton {
+        width: 138px;
+    }
+
+    .modal-body p {
+        margin: 5px 40px 20px 40px;
+    }
+
 }
