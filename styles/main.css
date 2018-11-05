@@ -3,15 +3,26 @@
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 3px 6px 0px #999;
+    height: 90px;
 }
 
 a.navbar-brand {
     color: white !important;
+    font-size: 20px;
 }
 
 h4 {
     color: grey;
     font-weight: 400 !important;
+    vertical-align: bottom;
+    float: left;
+    line-height: unset;
+    margin-left: -15px;
+}
+
+.floatRightButtons {
+    float: right;
+    margin-right: -15px;
 }
 
 .noPadding {
@@ -22,9 +33,43 @@ h4 {
     margin-top: 50px;
 }
 
+.profilePicture {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid #909090;
+}
+
+.contact1 {
+    background: url("../assets/contact5.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.contact2 {
+    background: url("../assets/contact2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.contact3 {
+    background: url("../assets/contact3.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.contact4 {
+    background: url("../assets/contact4.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.contact5 {
+    background: url("../assets/contact1.jpg") no-repeat center;
+    background-size: cover;
+}
+
 #letterRow {
     background: #E8E8E8;
-    height: 25px;
+    height: 32px;
+    line-height: 32px;
     vertical-align: middle;
     margin-top: 20px;
 }
@@ -35,9 +80,29 @@ h4 {
     height: 100%;
 }
 
-#profilePicture, #contactPlaceHolder, #addButton  {
+#profilePicture  {
     border-radius: 50%;
     line-height: 0.8px;
+}
+
+.addButtonBackground {
+    background: white;
+    height: 40px;
+    width: 40px;
+}
+
+#addButton {
+    border-radius: 50%;
+    line-height: 0.8px;
+    height: 18px;
+    width: 18px;
+}
+
+#contactPlaceHolder {
+    border-radius: 50%;
+    line-height: 0.8px;
+    height: 115px;
+    width: 115px;
 }
 
 .parent {
@@ -104,27 +169,77 @@ h4 {
     border-radius: 4px;
     background: rgb(248, 249, 250);
     cursor: pointer;
-    margin-top: 3px;
 }
 
 #myselectFilter:hover {
     background: #E8E8E8;
 }
 
-#AddContactButton {
-    margin-top: -4px !important;
-}
-
 #addContactModal {
-    margin-top: auto ;
-    margin-bottom: auto;
-    height: 570px;
+    margin-top: 200px ;
 }
 
 #deleteContactModal {
     margin-top: auto ;
     margin-bottom: auto;
     height: 250px;
+}
+
+.dropdown-toggle {
+    background: white;
+    color: #909090;
+    border: 1px solid #909090;
+}
+
+.dropdown-toggle:hover  {
+    background: white;
+    color: #909090;
+    border: 1px solid #909090;
+}
+
+.caret {
+    border-right: 1px solid #909090;
+    padding-right: 10px;
+}
+
+li {
+    padding: 0 0 0 10px;
+    margin: 0;
+    height: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    vertical-align: center;
+}
+
+li:hover {
+    background: white;
+    cursor: pointer;
+}
+
+.firstIndex {
+    border-bottom: 1px solid #909090;
+}
+
+#AddContactButton {
+    margin-left: 10px;
+}
+
+.modal-header {
+    margin: 20px;
+    height: 70px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.close {
+    float: right;
+    font-weight: 900;
+    color: #909090;
+    font-size: 30px;
+}
+
+.modal-header .close {
+    margin: -50px -40px auto auto;
 }
 
 /* Media Queries */

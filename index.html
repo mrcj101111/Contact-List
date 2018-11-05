@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contact List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/styles/main.css" />
-    
+
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
 
     <!--Jquery, popper.js, Bootstrap.js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,21 +27,23 @@
     </nav>
 
 <!--Contact List-->
-<div class="container">
-    <div class="row" id="headingRow">
-        <div class="col-sm-6 noPadding">
-            <h4>My Contacts</h4>
-        </div>
-        <div class="col-sm-6 noPadding" style="text-align: right;">
-            <select id="myselectFilter">
-                <option value="1">Mobile Number</option>
-                <option value="2">Email</option>
-            </select>
-            <button class="btn btn-outline-primary" type="button" id="AddContactButton" data-toggle="modal" data-target="#addContactModal">
+    <div class="container">
+        <h4>My Contacts</h4>
+
+        <div class="floatRightButtons">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Filter by
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="firstIndex"><a>Mobile number</a></li>
+                    <li><a>Email</a></li>
+                </ul>
+                <button class="btn btn-outline-primary" type="button" id="AddContactButton" data-toggle="modal" data-target="#addContactModal">
                 Add Contact
-            </button>
+                </button>
+            </div>
         </div>
-    </div>
+        <div class="clearfix"></div>
 
     <div class="row" id="letterRow">
         <div class="col-sm-6">
@@ -51,7 +53,8 @@
 
     <div class="row" id="profileRow">
         <div class="col-3 col-sm-3 col-md-2">
-            <img src="/assets/contact5.jpg" alt="contact5" height="80px" width="80px" id="profilePicture">
+            <div class="profilePicture contact1">
+            </div>
         </div>
         <div class="col-6 col-sm-5 col-md-4 parent"> 
             <div class="child">
@@ -63,7 +66,7 @@
         <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
             <div class="child">
                 <button type="submit" style="border: 0; background: transparent">
-                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                    <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                 </button>
             </div>
         </div>
@@ -72,7 +75,8 @@
 
     <div class="row" id="profileRow">
         <div class="col-3 col-sm-3 col-md-2">
-            <img src="/assets/contact3.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+            <div class="profilePicture contact3">
+            </div>
         </div>
         <div class="col-6 col-sm-5 col-md-4 parent">
             <div class="child">
@@ -84,7 +88,7 @@
         <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
             <div class="child">
                 <button type="submit" style="border: 0; background: transparent">
-                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                    <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                 </button>
             </div>
         </div>
@@ -93,7 +97,8 @@
 
     <div class="row" id="profileRow">
         <div class="col-3 col-sm-3 col-md-2">
-            <img src="/assets/contact4.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+            <div class="profilePicture contact4">
+            </div>
         </div>
         <div class="col-6 col-sm-5 col-md-4 parent">
             <div class="child">
@@ -105,7 +110,7 @@
         <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
             <div class="child">
                 <button type="submit" style="border: 0; background: transparent">
-                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                    <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                 </button>
             </div>
         </div>
@@ -119,7 +124,8 @@
 
     <div class="row" id="profileRow">
         <div class="col-3 col-sm-3 col-md-2">
-            <img src="/assets/contact1.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+            <div class="profilePicture contact5">
+            </div>
         </div>
         <div class="col-6 col-sm-5 col-md-4 parent">
             <div class="child">
@@ -131,7 +137,7 @@
         <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
             <div class="child">
                 <button type="submit" style="border: 0; background: transparent">
-                    <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                    <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                 </button>
             </div>
         </div>
@@ -140,7 +146,8 @@
 
     <div class="row" id="profileRow">
             <div class="col-3 col-sm-3 col-md-2">
-                <img src="/assets/contact2.jpg" alt="contact3" height="80px" width="80px" id="profilePicture">
+                <div class="profilePicture contact2">
+                </div>
             </div>
             <div class="col-6 col-sm-5 col-md-4 parent">
                 <div class="child">
@@ -152,7 +159,7 @@
             <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
                 <div class="child">
                     <button type="submit" style="border: 0; background: transparent">
-                        <img src="/assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                        <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                     </button>
                 </div>
             </div>
@@ -170,8 +177,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-body-image">
-                        <img src="/assets/ContactPlaceHolder.png" alt="delete" height="70px" width="70px" id="contactPlaceHolder">
-                        <img src="/assets/AddButton.png" alt="delete" height="18px" width="18px" id="addButton">
+                        <img src="assets/ContactPlaceHolder.png" alt="delete" height="70px" width="70px" id="contactPlaceHolder">
+                        <div class="addButtonBackground">
+                            <img src="assets/AddButton.png" alt="delete" id="addButton">
+                        </div>
                     </div>
                     <form class="addContactForm">
                         <div class="form-group">
