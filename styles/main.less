@@ -1,7 +1,24 @@
-/*General*/
+//variables
+@mainColor: #0099FF; //blue
+@greyText: #909090; //grey text
+@whiteText: white; //white text
+
+@greyBackground: #E8E8E8; //grey background
+@whiteBackground: white; //white background
+
+//Mixins
+.greyBorder {
+    border: 1px solid #909090;
+}
+
+.lightGreyBorder {
+    border: 1px solid #E8E8E8;
+}
+
+//Typography
 h4 {
-    color: grey;
-    font-weight: 400 !important;
+    color: @greyText;
+    font-weight: 400;
     vertical-align: bottom;
     float: left;
     line-height: unset;
@@ -14,26 +31,23 @@ li {
     line-height: 32px;
     font-weight: 400;
     vertical-align: center;
-}
-
-li:hover {
-    background: white;
-    cursor: pointer;
+    &:hover {
+        background: white;
+        cursor: pointer;
+    }
 }
 
 /*Contact Form*/
-
 .navbar {
-    background-color:#0099FF !important;
+    background-color:@mainColor;
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 3px 6px 0px #999;
     height: 90px;
-}
-
-a.navbar-brand {
-    color: white !important;
-    font-size: 35px;
+    a.navbar-brand {
+        color: @whiteText;
+        font-size: 35px;
+    }
 }
 
 .floatRightButtons {
@@ -54,7 +68,7 @@ a.navbar-brand {
     width: 100px;
     border-radius: 50%;
     position: relative;
-    border: 1px solid #909090;
+    .greyBorder();
 }
 
 .contact1 {
@@ -82,27 +96,27 @@ a.navbar-brand {
     background-size: cover;
 }
 
-#letterRow {
-    background: #E8E8E8;
+.letterRow {
+    background: @greyBackground;
     height: 32px;
     line-height: 32px;
     vertical-align: middle;
     margin-top: 20px;
 }
 
-#profileRow {
+.profileRow {
     margin-top: 20px;
     width: 100%;
     height: 100%;
 }
 
-#profilePicture  {
+.profilePicture  {
     border-radius: 50%;
     line-height: 0.8px;
 }
 
 .addButtonBackground {
-    background: white;
+    background: @whiteBackground;
     height: 40px;
     width: 40px;
     position: relative;
@@ -110,14 +124,13 @@ a.navbar-brand {
     border-radius: 50%;
     top: -35px;
     left: 40px;
-    border: 0.1px solid #E8E8E8
+    .lightGreyBorder();
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-.addButtonBackground:hover {
-    cursor: pointer;
-}
-
-#addButton {
+.addButton {
     line-height: 0.8px;
     height: 18px;
     width: 18px;
@@ -128,9 +141,12 @@ a.navbar-brand {
     top: 0;
     right: 0;
     bottom: 0;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-#contactPlaceHolder {
+.contactPlaceHolder {
     border-radius: 50%;
     line-height: 0.8px;
     height: 115px;
@@ -141,45 +157,29 @@ a.navbar-brand {
     width: 100%;
     height: 80px;
     display: table;
+    .child {
+        display: table-cell;
+        vertical-align: middle;
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
 }
 
-.parent > .child {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.parent > .child > p {
-    margin: 0px;
-    padding: 0px;
-}
-
-#deleteIcon, #addButton:hover {
+.deleteIcon {
     cursor: pointer;
-}
-
-#myselectFilter {
-    height: 38px;
-    width: auto;
-    border-color: #f8f9fa;
-    border-radius: 4px;
-    background: rgb(248, 249, 250);
-    cursor: pointer;
-}
-
-#myselectFilter:hover {
-    background: #E8E8E8;
 }
 
 .dropdown-toggle {
-    background: white;
-    color: #909090;
-    border: 1px solid #909090;
-}
-
-.dropdown-toggle:hover  {
-    background: white;
-    color: #909090;
-    border: 1px solid #909090;
+    background: @whiteBackground;
+    color: @greyText;
+    .lightGreyBorder();
+    &:hover  {
+        background: @whiteBackground;
+        color: @greyText;
+        .lightGreyBorder();
+    }
 }
 
 .caret {
@@ -192,12 +192,11 @@ a.navbar-brand {
     border-bottom: 1px solid #909090;
 }
 
-#AddContactButton {
+.addContactButton {
     margin-left: 10px;
 }
 
 /*Modal*/
-
 .modal-body-image {
     text-align: center;
     position: relative;
@@ -205,11 +204,11 @@ a.navbar-brand {
     left: 0;
 }
 
-#contactPlaceHolder {
+.contactPlaceHolder {
     position: relative;
     top: 0;
     left: 0;
-    border: 0.1px solid #E8E8E8;
+    .lightGreyBorder();
 }
 
 .addContactForm {
@@ -285,11 +284,31 @@ a.navbar-brand {
     display: none;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
-    background: white;
-    color: #909090;
+.btn-primary {
+    &:not(:disabled) {
+        &:not(.disabled).active {
+            &:focus {
+                background: white;
+                color: #909090;
+            }
+        }
+        &:not(.disabled) {
+            &:active {
+                &:focus {
+                    background: white;
+                    color: #909090;
+                }
+            }
+        }
+    }
+}
+.show {
+    >.btn-primary.dropdown-toggle {
+        &:focus {
+            background: white;
+            color: #909090;
+        }
+    }
 }
 
 .AddContactPlusIcon {
@@ -313,22 +332,22 @@ a.navbar-brand {
         font-weight: 300 !important;
     }
 
-    #AddContactButton {
+    .addContactButton {
         display: none;
     }
 
     .AddContactPlusIcon {
-    display: inline-block;
+        display: inline-block;
     }
 
-    #letterRow {
-    height: 20px;
-    line-height: 20px;
+    .letterRow {
+        height: 20px;
+        line-height: 20px;
     }
 
     .profilePicture {
-    height: 70px;
-    width: 70px;
+        height: 70px;
+        width: 70px;
     }
 
     .parent > .child > p {
@@ -336,13 +355,12 @@ a.navbar-brand {
     }
 
     #addContactModal {
-        margin-top: 50px ;
         margin: auto;
     }
 
-    #contactPlaceHolder {
-    height: 100px;
-    width: 100px;
+    .contactPlaceHolder {
+        height: 100px;
+        width: 100px;
         margin-bottom: -40px;
     }
 

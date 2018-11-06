@@ -9,15 +9,17 @@
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.less" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="styles/main.less" />
 
     <!--Jquery, popper.js, Bootstrap.js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.js" type="text/javascript"></script>
+
 </head>
 
 <!--Main body-->
@@ -40,7 +42,7 @@
                     <li class="firstIndex"><a>Mobile number</a></li>
                     <li><a>Email</a></li>
                 </ul>
-                <button class="btn btn-outline-primary" type="button" id="AddContactButton" data-toggle="modal" data-target="#addContactModal">
+                <button class="btn btn-outline-primary addContactButton" type="button" data-toggle="modal" data-target="#addContactModal">
                 Add Contact
                 </button>
                 <input type="image" src="assets/AddButton.png" class="AddContactPlusIcon" data-toggle="modal" data-target="#addContactModal"/>
@@ -48,13 +50,13 @@
         </div>
         <div class="clearfix"></div>
 
-        <div class="row" id="letterRow">
+        <div class="row letterRow">
             <div class="col-sm-6">
                 <p>B</p>
             </div>
         </div>
 
-        <div class="row" id="profileRow">
+        <div class="row profileRow">
             <div class="col-3 col-sm-3 col-md-2">
                 <div class="profilePicture contact1">
                 </div>
@@ -69,14 +71,14 @@
             <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
                 <div class="child">
                     <button type="submit" style="border: 0; background: transparent">
-                        <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                        <img src="assets/delete.png" width="20" height="20" alt="submit" class="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                     </button>
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="row" id="profileRow">
+        <div class="row profileRow">
             <div class="col-3 col-sm-3 col-md-2">
                 <div class="profilePicture contact3">
                 </div>
@@ -91,14 +93,14 @@
             <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
                 <div class="child">
                     <button type="submit" style="border: 0; background: transparent">
-                        <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                        <img src="assets/delete.png" width="20" height="20" alt="submit" class="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                     </button>
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="row" id="profileRow">
+        <div class="row profileRow">
             <div class="col-3 col-sm-3 col-md-2">
                 <div class="profilePicture contact4">
                 </div>
@@ -113,19 +115,19 @@
             <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
                 <div class="child">
                     <button type="submit" style="border: 0; background: transparent">
-                        <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                        <img src="assets/delete.png" width="20" height="20" alt="submit" class="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                     </button>
                 </div>
             </div>
         </div>
 
-        <div class="row" id="letterRow">
+        <div class="row letterRow">
             <div class="col-sm-6">
                 <p>C</p>
             </div>
         </div>
 
-        <div class="row" id="profileRow">
+        <div class="row profileRow">
             <div class="col-3 col-sm-3 col-md-2">
                 <div class="profilePicture contact5">
                 </div>
@@ -140,14 +142,14 @@
             <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
                 <div class="child">
                     <button type="submit" style="border: 0; background: transparent">
-                        <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                        <img src="assets/delete.png" width="20" height="20" alt="submit" class="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                     </button>
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="row" id="profileRow">
+        <div class="row profileRow">
             <div class="col-3 col-sm-3 col-md-2">
                 <div class="profilePicture contact2">
                 </div>
@@ -162,7 +164,7 @@
             <div class="col-3 col-sm-4 col-md-6 parent" style="text-align: right">
                 <div class="child">
                     <button type="submit" style="border: 0; background: transparent">
-                        <img src="assets/delete.png" width="20" height="20" alt="submit" id="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
+                        <img src="assets/delete.png" width="20" height="20" alt="submit" class="deleteIcon" data-toggle="modal" data-target="#deleteContactModal">
                     </button>
                 </div>
             </div>
@@ -180,9 +182,9 @@
                     </div>
                     <div class="modal-body">
                         <div class="modal-body-image">
-                            <img src="assets/ContactPlaceHolder.png" alt="delete" height="70px" width="70px" id="contactPlaceHolder">
+                            <img src="assets/ContactPlaceHolder.png" alt="delete" height="70px" width="70px" class="contactPlaceHolder">
                             <div class="addButtonBackground">
-                                <img src="assets/AddButton.png" alt="delete" id="addButton">
+                                <img src="assets/AddButton.png" alt="delete" class="addButton">
                             </div>
                         </div>
                         <form class="addContactForm">
